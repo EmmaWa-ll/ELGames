@@ -17,13 +17,14 @@ body {
 
 h1 {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 50px;
 }
 
 .subtitle {
   color: #c4b5fd;
   font-size: 20px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .gameInfo {

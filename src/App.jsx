@@ -48,19 +48,23 @@ function App() {
     <>
       <div className="app">
         <h1>🎮 ELGames</h1>
+
         <p className="subtitle">Catch the Bug!</p>
 
         <div className="gameInfo">
-          <span>⭐ Poäng: {score}</span>
-          <span>⏰ Tid: {time}</span>
+          <span>⭐ Points: {score}</span>
+          <span>⏰ Time: {time}</span>
         </div>
 
         <div className="gameBoard">
           {!playing && time === 20 && (
             <div className="startScreen">
               <h2>🐞 Catch the Bug</h2>
-              <p>Klicka på buggen innan den rymmer!</p>
-              <button onClick={startGame}>STARTA</button>
+              <p>
+                Click the bug as many times as possible, before the time runs
+                out!
+              </p>
+              <button onClick={startGame}>START</button>
             </div>
           )}
 
@@ -79,14 +83,14 @@ function App() {
           {!playing && time === 0 && (
             <div className="gameOver">
               <h2>GAME OVER 🎮</h2>
-              <p>Du fick</p>
-              <h3>{score} poäng!</h3>
+              <p>You got</p>
+              <h3>{score} Points!</h3>
 
               {score >= 20 && <p>🔥 LEGEND!</p>}
-              {score >= 10 && score < 20 && <p>😎 Snyggt!</p>}
-              {score < 10 && <p>🐢 Du kan bättre!</p>}
+              {score >= 10 && score < 20 && <p>😎 Nice!</p>}
+              {score < 10 && <p>🐢 You can do better!</p>}
 
-              <button onClick={startGame}>SPELA IGEN</button>
+              <button onClick={startGame}>Play again</button>
             </div>
           )}
         </div>
